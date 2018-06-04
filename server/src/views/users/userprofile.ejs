@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<!--<div class="ui main text container segment ">-->
+<!--    <div class="ui huge header">User Profile</div>-->
+<!--    <form class="ui form">-->
+<!--         <div class="field">-->
+<!--            <h4><strong>Username:</strong> <%= user.username %></h4>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <div class="navbar-right" >-->
+<!--        <a class="btn btn-primary btn-lg" href="/userprofile/<%= user._id %>/edit">Edit</a>-->
+<!--    </div>-->
+<!--</div>  -->
+<div class="container">
+    <div class="col-md-9">
+        <div class="thumbnail">
+            <img class="img-responsive" src="http://icreatived.com/wp-content/uploads/2014/10/Interesting-Creative-Facebook-Profile-Picture-Ideas-Punk-1.jpg">
+            <div class="caption">
+                <div class="ui huge header">User Profile</div>
+                <h4><strong>Username:</strong> <%= user.username %></h4>
+            </div>
+            <div class="pull-right" >
+                <a class="ui inverted primary button large" href="/userprofile/<%= user._id %>/edit">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

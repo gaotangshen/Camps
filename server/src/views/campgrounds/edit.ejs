@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%= campground.name %></div>
+    <form class="ui form" action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="campground[name]" value="<%=campground.name  %>">
+        </div>
+        <div class="field">
+            <label>Price</label>
+            <input type="number" name="campground[price]" value="<%=campground.price  %>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="campground[image]" value="<%= campground.image %>">
+        </div>
+        <div class="field">
+            <label>Camground Content</label>
+            <textarea name="campground[description]"><%= campground.description %></textarea>
+        </div>
+        <div class="ui buttons">
+          <a class="ui button" href="/campgrounds">Cancel</a>
+          <div class="or"></div>
+          <button class="ui primary button" type="submit">Save</button>
+        </div>
+    </form>
+</div>
+
+<% include ../partials/footer %>

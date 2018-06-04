@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Create a New Campground</div>
+    <form class="ui form" action="/campgrounds" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="name">
+        </div>
+         <div class="field">
+            <label>Price</label>
+            <input type="number" name="price" placeholder="price" min="0.01" step="0.01">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="image" placeholder="image url">
+        </div>
+        <div class="field">
+            <label>Camground Content</label>
+            <textarea name="description" placeholder="text"></textarea>
+        </div>
+        <!--<input class="ui primary basic button" type="submit">-->
+        <div class="ui buttons">
+          <a class="ui button" href="/campgrounds">Cancel</a>
+          <div class="or"></div>
+          <button class="ui primary button" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<% include ../partials/footer %>
