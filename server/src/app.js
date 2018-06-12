@@ -9,11 +9,13 @@ const methodOverride        = require("method-override");
 const Campground            = require("./models/campground");
 const Comment               = require("./models/comment");
 const User                  = require("./models/user");
-const seedDB                = require("./seeds");
+// const seedDB                = require("./seeds");
+// const { seedItem }          = require("./seeds");
 const path = require('path');
 //requiring routes
 const commentRoutes = require("./routes/comments");
 const campgroundRoutes = require("./routes/campgrounds");
+const itemRoutes = require("./routes/items");
 const indexRoutes = require("./routes/index");
 
 // Constants
@@ -30,6 +32,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB(); 
+// seedItem(); 
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -52,6 +55,7 @@ app.use(function(req, res, next){
 });
 
 app.use("/api/", indexRoutes);
+app.use("/api/items", itemRoutes);
 app.use("/api/campgrounds", campgroundRoutes);
 app.use("/api/campgrounds/:id/comments", commentRoutes);
 

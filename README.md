@@ -18,6 +18,7 @@ The client server is spun up at `localhost:3000` and it proxies internally to th
 The local directories are mounted into the containers, so changes will reflect immediately. However, changes to package.json will likely need to a rebuild: `docker-compose down && docker-compose build && docker-compose up`.
 
 ### Notes
+https://material-ui.com/demos/
 
 #### Adding new scss files
 

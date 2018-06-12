@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import reducers from './redux/reducers';
 import App from './containers/App';
 import Campgrounds from './containers/Campgrounds';
+import Homestorage from './containers/Homestorage';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -17,6 +18,7 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/campgrounds" component={ Campgrounds }/>
+          <Route path="/homestorage" component={ Homestorage }/>
           <Route path="/" component={ App }/>
         </Switch>
       </div>
